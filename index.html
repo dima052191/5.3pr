@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Математичні функції й константи</title>
+ <meta charset="utf-8">
+</head>
+<body>
+ <div id="output"></div>
+
+ <script>
+    const e = Math.E;
+    const pi = Math.PI;
+    const ln10 = Math.LN10;
+    const ln2 = Math.LN2;
+    const log2e = Math.LOG2E;
+    const log10e = Math.LOG10E;
+    const sqrt2 = Math.SQRT2;
+    const sqrt1_2 = Math.SQRT1_2;
+  
+    const round = Math.round(1.54);
+    const max = Math.max(4, 2);
+    const min = Math.min(4, 2);
+    const pow = Math.pow(4, 2);
+    const sqrt = Math.sqrt(4);
+  
+    const random = Math.random();
+   
+    const outputElement = document.getElementById("output");
+    outputElement.innerHTML = `<h2>КОНСТАНТИ</h2>
+     <p>1. Значення константи е = ${e}</p>
+     <p>2. Значення константи π = ${pi}</p>
+     <p>3. Десятковий логарифм постійної Ейлера (е) = ${ln10}</p>
+     <p>4. Двійковий логарифм постійної Ейлера (е) = ${ln2}</p>
+     <p>5. Натуральний логарифм числа 10 = ${log10e}</p>
+     <p>6. Натуральний логарифм числа 2 = ${log2e}</p>
+     <p>7. Корінь квадратний із двох = ${sqrt2}</p>
+     <p>8. Корінь квадратний з однієї другої = ${sqrt1_2}</p>
+     <h2>ФУНКЦІЇ</h2>
+     <p>Результат округлення числа 1,54 за правилами арифметики: y = ${round}</p>
+     <p>Вибір найбільшого із двох чисел 4 й 2: y = ${max}</p>
+     <p>Вибір найменшого із двох чисел 4 й 2: y = ${min}</p>
+     <p>Результат зведення в степінь: 42 = ${pow}</p>
+     <p>Результат добування квадратного кореня з 4: y = ${sqrt}</p>
+     <h2>Генератор рандомних цифр</h2>
+     <p>Формування випадкових чисел в інтервалі [0;1]: y = ${random}</p>`;
+  
+    function task3(){
+      const e = 2.718281828459045;
+      const pi = 3.141592653589793;
+      const LgE = 0.4342944819032518;
+      const Log2E = 1.4426950408889634;
+      const Ln10 = 2.302585092994046;
+      const Ln2 = 0.6931471805599453;
+      const sqrt2 = 1.4142135623730951;
+      const sqrt1_2 = 0.7071067811865476;
+      const exp2 = Math.pow(e, 2);
+      const logE2 = Math.log(Math.pow(e, 2));
+      const log10_100 = Math.log10(100);
+      const log2_8 = Math.log2(8);
+      const tan45 = Math.tan(45 * Math.PI / 180);
+  
+      outputElement.innerHTML += `
+      <h2>Додаткові КОНСТАНТИ та ФУНКЦІЇ</h2>
+      <p>Результат зведення е в степінь 2: y = ${exp2}</p>
+      <p>Натуральний логарифм від e^2: y = ${logE2}</p>
+      <p>Результат обчислення десяткового логарифма від числа 100: y = ${log10_100}</p>
+      <p>Результат обчислення двійкового логарифма від числа 8: y = ${log2_8}</p>
+      <p>Тангенс 45 градусів (з округленням): y = ${Math.round(tan45)}</p>`;
+    }
+  
+    // Call the task3 function to add additional constants and functions
+    task3();
+  </script>
+  
+</body>
+</html>
